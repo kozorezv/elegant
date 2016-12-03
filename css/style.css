@@ -106,6 +106,10 @@ header {
 .nav ul {
 	max-width: 1200px;
 	margin: auto;
+	display: flex;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
 }
 .nav ul li {
 	margin-top: 20px;
