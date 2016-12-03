@@ -1,0 +1,269 @@
+/* variables */
+:root {
+	--grey: #4d5c66; 
+	--yellow: #dcbe5c;
+}
+/* end */
+/* fonts */
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+	font-family: 'Open Sans LightItalic';
+	src: url('../fonts/OpenSans-LightItalic.ttf');
+}
+/* end */
+body, html {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+	font-size: 14px;
+}
+li {
+	list-style-type: none;
+}
+p, a {
+	line-height: 1.7;
+	color: var(--grey);
+	font-family: 'Open Sans Light';
+}
+section:not(.banner) { /* For all sections except .banner */
+	padding: 40px 0;
+}
+.tell_about .wrapper, 
+.amazing_people .wrapper,
+.like_to_write .wrapper,
+.contact_us .wrapper { 
+	max-width: 800px; /* max-width for all wrappers in sections except .banner and show work */
+}
+.banner {
+	background: url('../img/header_background.jpg') no-repeat center;
+	background-size: cover;
+	height: 45rem;
+	width: 100%;
+	padding-top: 20px;
+}
+.wrapper {
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: 1200px;
+	text-align: center;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+}
+.logo {
+	height: 42px;
+	width: 190px;
+	background: url('../img/logo.png') no-repeat;
+	background-size: contain; 
+}
+.menu {
+	color: #fff; 
+	height: 30px;
+	z-index: 100;
+	background: none;
+	cursor: pointer;
+	border: 0;
+	font-weight: bold;
+	font-size: 16px;
+}
+.menu:focus {
+	outline: 0;
+}
+.nav {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(77, 92, 102, 0.9);
+	padding-top: 30px;
+	transition: opacity .5s ease-in-out, visibility 0s .5s;
+	opacity: 0;
+	visibility: hidden;
+}
+.nav.show {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity .5s ease-in-out;
+}
+.nav-link {
+	font-size: 30px;
+	color: #fff;
+	margin-top: 20px;
+	transition: color .3s ease-in-out;
+}
+.nav-link:hover {
+	color: var(--yellow)
+}
+.nav ul {
+	max-width: 1200px;
+	margin: auto;
+}
+.nav ul li {
+	margin-top: 20px;
+}
+.large-banner-h1 {
+ 	font-size: 80px;
+ 	color: #fff;
+ 	line-height: 1.0;
+ 	font-family: 'Open Sans Light';
+ 	font-weight: 300;
+ 	margin-top: 250px;
+}
+.large-banner-h1 span {
+	font-family: 'Open Sans LightItalic';
+}
+
+/* Section: Tell The World About Us */
+.small_yellow_caption {
+	font-size: 14px;
+	color: var(--yellow);
+}
+.big_grey_caption {
+	font-size: 50px;
+	color: var(--grey);
+	margin: 0 0 30px;
+}
+.bordered_button {
+	display: inline-block;
+	border: 1px solid #000;
+	padding: 16px 50px;
+	margin: 30px;
+}
+/* Section: Show Your Amazing Work */
+.show_work .wrapper {
+	padding: 0;
+}
+.show_work .wrapper .pictures {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+.pictures figure {
+	min-width: 298px;
+    height: 300px;
+    display: flex;
+    margin: 1px;
+    flex-grow: 1;
+    background-size: cover;
+}
+.pic-1 {
+	background: url('../img/whatWeDo/pic-1.jpg') no-repeat center;
+}
+.pic-2 {
+	background: url('../img/whatWeDo/pic-2.jpg') no-repeat center;
+}
+.pic-3 {
+	background: url('../img/whatWeDo/pic-3.jpg') no-repeat center;
+}
+.pic-4 {
+	background: url('../img/whatWeDo/pic-4.jpg') no-repeat center;
+}
+.pic-5 {
+	background: url('../img/whatWeDo/pic-5.jpg') no-repeat center;
+}
+.pic-6 {
+	background: url('../img/whatWeDo/pic-6.jpg') no-repeat center;
+}
+.pic-7 {
+	background: url('../img/whatWeDo/pic-7.jpg') no-repeat center;
+}
+.pic-8 {
+	background: url('../img/whatWeDo/pic-8.jpg') no-repeat center;
+}
+
+/* The Amazing People Behind This */
+.those_people {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.those_people .person {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin: 2px;
+	width: 260px;
+	background: #f9f9f9;
+}
+.person .description {
+	padding: 20px;
+}
+.person .description .small_yellow_caption {
+	margin: 3px;
+}
+.person .description h3 {
+	font-family: 'Open Sans Light';
+	color: var(--grey)
+}
+.person .description p {
+	font-size: 14px;
+}
+
+/* We Like To Write */
+article.post {
+	display: flex;
+	text-align: left;
+	background: #f9f9f9;
+}
+.post .description {
+	padding: 20px;
+}
+.post .description h4, .post .description h2 {
+	color: var(--grey);
+}
+.post img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Work With Us */
+.contact_data {
+	display: flex;
+	flex-wrap: wrap;
+	background: #f9f9f9;
+}
+.contact_data div {
+	width: 360px;
+	padding: 20px;
+	flex-grow: 1;
+}
+
+footer {
+	background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+footer p {
+	margin: 16px;
+}
+
+/* media queries */
+@media(max-width: 400px) {
+	.large-banner-h1 {
+		font-size: 68px;
+	}
+	.bordered_button {
+		padding: 16px 40px;
+	}
+	.logo {
+		height: 35px;
+	}
+}
+@media(max-width: 700px){
+	article.post {
+		flex-direction: column;
+		max-width: 385px;
+		margin: auto;
+	}
+}
